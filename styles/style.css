@@ -3,7 +3,7 @@
 :root {
     --cor-primaria: #17252A;
     --cor-secundaria: #f6f6f6;
-    --cor-terciaria: ;
+    --cor-terciaria: #F76C6C;
 
     --fonte-primaria: 'Krona One', sans-serif; 
     --fonte-secundaria: 'Montserrat', sans-serif;
@@ -32,7 +32,7 @@ body{
 .cabecalho__menu__link {
     font-family: var(--fonte-secundaria);
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
     color:var(--cor-terciaria);
     text-decoration: none;
 }
@@ -45,32 +45,31 @@ body{
 }
 
 .apresentacao__conteudo {
-    width: 615px;
+    width: 55%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--fonte-primaria);
 } 
 
-.titulo-destaque{
+.titulo_destaque{
     color: var(--cor-terciaria);
 }
 
 .apresentacao__conteudo__texto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
 }
 
 .apresentacao__conteudo__texto__cv {
-    font-size: 18px;
+    font-size: 1.15rem;
     font-family: var(--fonte-secundaria);
     text-align: justify;
 }
-
 
 .apresentacao__conteudo__texto a{
     text-decoration: none;
@@ -82,25 +81,25 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 32px;
+    gap: 2rem;
 }
 
 .apresentacao__links__subtitulo {
     font-family: var(--fonte-primaria);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
-.apresentacao__links__link {
+.apresentacao__links__navegacao {
     /*background-color: #F76c6c;*/
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px;
-    width: 320px;
+    width: 50%;
     text-align: center;
     border-radius: 16px;
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 21.5px 0;
     text-decoration: none;
     color: var(--cor-secundarias);
@@ -109,13 +108,15 @@ body{
     border: 2px solid var(--cor-terciaria);
 }
 
-.apresentacao__links__link:hover {
+.apresentacao__links__navegacao:hover {
     background-color: var(--cor-terciaria);
 }
 
 .apresentacao__foto {
     border-radius: 16px;
     border: #F76c6c50 2px solid;
+    width: 40%;
+    margin-bottom: 10%;
 }
 .rodape {
     color: var(--cor-primaria);
@@ -123,6 +124,22 @@ body{
     padding: 24px;
     text-align: center;
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }   
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao__conteudo {
+        width: auto;
+    }
 }
